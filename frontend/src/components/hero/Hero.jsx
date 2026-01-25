@@ -60,10 +60,10 @@ const Hero = () => {
                     {slide.title}
                   </h1>
                   <div className="flex gap-6 mt-8 justify-center md:justify-start">
-                    <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-3xl font-medium">
+                    <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-3xl font-medium whitespace-nowrap">
                       {slide.buttonText1}
                     </button>
-                    <button className="group flex items-center gap-2 font-medium text-gray-800">
+                    <button className="group flex items-center gap-2 font-medium text-gray-800 whitespace-nowrap">
                       {slide.buttonText2}
                       <ArrowRight
                         className="group-hover:translate-x-1 transition-transform duration-200"
