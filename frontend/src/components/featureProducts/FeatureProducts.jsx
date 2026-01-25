@@ -5,19 +5,19 @@ import { motion } from "framer-motion";
 const products = [
   {
     id: 1,
-    image: `${import.meta.env.VITE_API_URL}/uploads/girl_with_headphone_image.png`,
+    image: `${import.meta.env.VITE_API_URL}/uploads/boy_with_laptop_image.png`,
     title: "Unparalleled Sound",
     description: "Experience crystal-clear audio with premium headphones.",
   },
   {
     id: 2,
-    image: `${import.meta.env.VITE_API_URL}/uploads/girl_with_earphone_image.png`,
+    image: `${import.meta.env.VITE_API_URL}/uploads/boy_with_earphone_image.jpg`,
     title: "Stay Connected",
     description: "Compact and stylish earphones for every occasion.",
   },
   {
     id: 3,
-    image: `${import.meta.env.VITE_API_URL}/uploads/boy_with_laptop_image.png`,
+    image: `${import.meta.env.VITE_API_URL}/uploads/boy_with_headphone_image.jpg`,
     title: "Power in Every Pixel",
     description: "Shop the latest laptops for work, gaming, and more.",
   },
@@ -44,7 +44,7 @@ const FeatureProducts = () => {
               <img
                 src={image}
                 alt={title}
-                className="group-hover:brightness-75 transition duration-300 w-full h-full object-cover"
+                className="group-hover:brightness-75 transition duration-300 w-full h-100 md:h-84  object-cover"
               />
               <div className="group-hover:-translate-y-4 transition duration-300 absolute bottom-5 left-5 text-white space-y-2">
                 <p className="text-xl md:text-2xl font-medium">{title}</p>
