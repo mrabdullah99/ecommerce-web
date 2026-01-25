@@ -43,7 +43,7 @@ const Hero = () => {
     <section>
       <div className="bg-[#E6E9F2] max-w-5xl mx-auto mt-6 rounded-xl overflow-hidden">
         <div
-          className="flex w-full transition-transform duration-700 ease-in-out"
+          className="flex w-full items-center transition-transform duration-700 ease-in-out"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
           {sliderData.map((slide) => (
@@ -52,23 +52,14 @@ const Hero = () => {
               className="w-full flex-shrink-0 overflow-hidden"
               style={{ flex: "0 0 100%" }}
             >
-              <div className="flex flex-col items-center px-6 py-10 md:px-14">
-                {/* Image First */}
-                <div className="w-full flex justify-center mb-8">
-                  <img
-                    src={slide.imgSrc}
-                    alt=""
-                    className="w-52 sm:w-64 md:w-72 lg:w-80 h-auto object-contain"
-                  />
-                </div>
-
-                {/* Content Below Image */}
-                <div className="w-full text-center">
+              <div className="flex flex-col md:flex-row items-center px-6 py-10 md:px-14 md:gap-8">
+                {/* Content - Left on Desktop */}
+                <div className="w-full md:w-1/2 text-center md:text-left order-2 md:order-1">
                   <p className="text-blue-600 font-semibold">{slide.offer}</p>
                   <h1 className="text-2xl md:text-4xl font-bold mt-2 leading-tight">
                     {slide.title}
                   </h1>
-                  <div className="flex gap-6 mt-8 justify-center">
+                  <div className="flex gap-6 mt-8 justify-center md:justify-start">
                     <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-3xl font-medium">
                       {slide.buttonText1}
                     </button>
@@ -80,6 +71,15 @@ const Hero = () => {
                       />
                     </button>
                   </div>
+                </div>
+
+                {/* Image - Right on Desktop */}
+                <div className="w-full md:w-1/2 flex justify-center mb-8 md:mb-0 order-1 md:order-2">
+                  <img
+                    src={slide.imgSrc}
+                    alt=""
+                    className="w-52 sm:w-64 md:w-72 lg:w-80 h-auto object-contain"
+                  />
                 </div>
               </div>
             </div>
