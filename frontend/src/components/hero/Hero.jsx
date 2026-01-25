@@ -46,13 +46,13 @@ const Hero = () => {
     <section>
       <div className="bg-[#E6E9F2] max-w-5xl py-8 px-4 md:px-14 mx-5 md:mx-auto mt-6 rounded-xl overflow-hidden">
         <div
-          className="w-[106%] flex transition-transform duration-700 ease-in-out"
+          className="w-full flex transition-transform duration-700 ease-in-out"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
           {sliderData.map((slide) => (
             <div
               key={slide.id}
-              className="w-full flex-shrink-0 mt-4 md:mt-10 mx-auto flex flex-col-reverse md:flex-row justify-around items-center md:items-stretch"
+              className="w-full flex-shrink-0 mt-4 md:mt-10 mx-auto flex flex-col-reverse md:flex-row items-center md:items-stretch"
             >
               <div className="max-w-md mt-7 md:mt-0 flex flex-col">
                 <p className="text-blue-600 font-semibold">{slide.offer}</p>
@@ -73,7 +73,11 @@ const Hero = () => {
                 </div>
               </div>
               <div>
-                <img src={slide.imgSrc} alt="Image" className="w-50 md:w-65" />
+                <img
+                  src={slide.imgSrc}
+                  alt="Image"
+                  className="w-50 md:w-[260px]"
+                />
               </div>
             </div>
           ))}
