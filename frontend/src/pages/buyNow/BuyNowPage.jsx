@@ -187,7 +187,7 @@ const BuyNowPage = () => {
                     <div key={index} className="flex gap-4">
                       <div className="w-24 h-24 bg-gray-100 rounded-lg overflow-hidden flex-shrink-0">
                         <img
-                          src={`${import.meta.env.VITE_API_URL}/uploads/${product.images[0]}`}
+                          src={product.images[0]}
                           alt={product.name}
                           className="w-full h-full object-cover"
                         />
