@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const Banner = () => {
   return (
     <motion.div
-      className="bg-[#E6E9F2] max-w-5xl mx-5 md:mx-auto flex flex-col md:flex-row items-center justify-between py-14 md:py-0 md:pl-20 my-16 rounded-xl overflow-hidden"
+      className="bg-[#E6E9F2] max-w-5xl mx-auto md:mx-auto flex flex-col md:flex-row items-center justify-between py-14 md:py-0 md:pl-20 my-16 rounded-xl overflow-hidden"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}

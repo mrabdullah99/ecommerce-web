@@ -157,9 +157,9 @@ const CartView = () => {
 
   if (cartItemsArray.length === 0) {
     return (
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen ">
         <div className="max-w-6xl mx-auto px-4 py-8">
-          <div className="bg-white rounded-2xl shadow-sm p-12 text-center">
+          <div className="bg-white rounded-2xl shadow-lg p-12 text-center">
             <div className="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
               <ShoppingBag size={48} className="text-gray-400" />
             </div>

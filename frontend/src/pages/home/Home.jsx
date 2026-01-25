@@ -7,7 +7,7 @@ import NewsLetter from "../../components/newsLetter/NewsLetter";
 
 const Home = () => {
   return (
-    <div>
+    <div className="min-h-screen w-full overflow-x-hidden">
       <Hero />
       <HomeProducts />
       <FeatureProducts />

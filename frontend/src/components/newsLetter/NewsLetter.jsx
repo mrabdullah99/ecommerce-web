@@ -1,6 +1,6 @@
 const NewsLetter = () => {
   return (
-    <div className="mx-5 flex flex-col items-center justify-center text-center gap-2 pt-8 pb-14">
+    <div className="max-w-5xl mx-auto flex flex-col items-center justify-center text-center gap-2 pt-8 pb-14">
       <h1 className="text-2xl md:text-4xl font-medium ">
         Subscribe now & get 20% off
       </h1>

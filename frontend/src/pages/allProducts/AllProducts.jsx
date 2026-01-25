@@ -15,7 +15,7 @@ const AllProducts = () => {
       : true,
   );
   return (
-    <div className="max-w-5xl md:mx-auto mx-5 flex flex-col pt-14">
+    <div className="max-w-5xl mx-auto md:mx-auto flex flex-col pt-14">
       <p className="text-3xl font-medium">
         {" "}
         {searchTerm ? `Search results for "${searchTerm}"` : "All products"}

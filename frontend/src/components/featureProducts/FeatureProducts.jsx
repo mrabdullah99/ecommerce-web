@@ -25,13 +25,13 @@ const products = [
 const FeatureProducts = () => {
   const navigate = useNavigate();
   return (
-    <div className=" mt-15 mb-5">
+    <div className="max-w-5xl mx-auto mt-15 mb-5">
       <div className="flex flex-col items-center">
         <p className="text-3xl font-medium">Featured Products</p>
         <div className="w-28 h-0.5 bg-blue-600 mt-2"></div>
       </div>
 
-      <div className="max-w-5xl mx-5 md:mx-auto grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 md:gap-14 mt-12 px-4 md:px-14">
+      <div className=" md:mx-auto grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 md:gap-14 mt-12 px-4 md:px-14">
         {products.map(({ id, image, title, description }, index) => (
           <motion.div
             key={id}

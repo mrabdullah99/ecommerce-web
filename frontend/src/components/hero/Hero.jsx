@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { ArrowRight } from "lucide-react";
+
 const sliderData = [
   {
     id: 1,
@@ -38,61 +39,64 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, [totalSlides]);
 
-  const nextSlide = () => (prev) => (prev + 1) % totalSlides;
-  const prevSlide = () =>
-    setCurrentIndex((prev) => (prev - 1 + totalSlides) % totalSlides);
-
   return (
     <section>
-      <div className="bg-[#E6E9F2] max-w-5xl py-8 px-4 md:px-14 mx-5 md:mx-auto mt-6 rounded-xl overflow-hidden">
+      <div className="bg-[#E6E9F2] max-w-5xl mx-auto mt-6 rounded-xl overflow-hidden">
         <div
-          className="w-full flex transition-transform duration-700 ease-in-out"
+          className="flex w-full transition-transform duration-700 ease-in-out"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
           {sliderData.map((slide) => (
             <div
               key={slide.id}
-              className="w-full flex-shrink-0 mt-4 md:mt-10 mx-auto flex flex-col-reverse md:flex-row items-center md:items-stretch"
+              className="w-full flex-shrink-0 overflow-hidden"
+              style={{ flex: "0 0 100%" }}
             >
-              <div className="max-w-md mt-7 md:mt-0 flex flex-col">
-                <p className="text-blue-600 font-semibold">{slide.offer}</p>
-                <h1 className="text-2xl md:text-4xl font-bold">
-                  {slide.title}
-                </h1>
-                <div className="flex gap-5 mt-9">
-                  <button className="bg-blue-600 hover:bg-blue-700 text-white  px-7 py-1.5 rounded-4xl">
-                    {slide.buttonText1}
-                  </button>
-                  <button className="group flex gap-2 font-medium items-center">
-                    {slide.buttonText2}
-                    <ArrowRight
-                      className="group-hover:translate-x-1 transition-transform"
-                      size={20}
-                    />
-                  </button>
+              <div className="flex flex-col items-center px-6 py-10 md:px-14">
+                {/* Image First */}
+                <div className="w-full flex justify-center mb-8">
+                  <img
+                    src={slide.imgSrc}
+                    alt=""
+                    className="w-52 sm:w-64 md:w-72 lg:w-80 h-auto object-contain"
+                  />
                 </div>
-              </div>
-              <div>
-                <img
-                  src={slide.imgSrc}
-                  alt="Image"
-                  className="w-50 md:w-[260px]"
-                />
+
+                {/* Content Below Image */}
+                <div className="w-full text-center">
+                  <p className="text-blue-600 font-semibold">{slide.offer}</p>
+                  <h1 className="text-2xl md:text-4xl font-bold mt-2 leading-tight">
+                    {slide.title}
+                  </h1>
+                  <div className="flex gap-6 mt-8 justify-center">
+                    <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-3xl font-medium">
+                      {slide.buttonText1}
+                    </button>
+                    <button className="group flex items-center gap-2 font-medium text-gray-800">
+                      {slide.buttonText2}
+                      <ArrowRight
+                        className="group-hover:translate-x-1 transition-transform duration-200"
+                        size={20}
+                      />
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           ))}
         </div>
       </div>
-      {/* DOT INDICATORS */}
-      <div className="flex justify-center gap-2 mt-4">
+      <div className="flex justify-center gap-3 mt-5">
         {sliderData.map((_, index) => (
-          <div
+          <button
             key={index}
             onClick={() => setCurrentIndex(index)}
-            className={`w-2 h-2 rounded-full cursor-pointer transition-all ${
-              currentIndex === index ? "bg-blue-600" : "bg-gray-300"
+            className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+              currentIndex === index
+                ? "bg-blue-600 scale-125"
+                : "bg-gray-300 hover:bg-gray-400"
             }`}
-          ></div>
+          />
         ))}
       </div>
     </section>
