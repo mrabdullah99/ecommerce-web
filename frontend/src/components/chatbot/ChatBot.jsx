@@ -39,15 +39,19 @@ const ChatBot = () => {
       {!open && (
         <div
           onClick={() => setOpen(true)}
-          className="fixed bottom-6 right-6 z-50 w-72 flex items-center bg-gradient-to-r from-blue-500 to-blue-600 shadow-xl rounded-full px-4 py-3 cursor-pointer transform transition hover:scale-105 hover:shadow-2xl"
+          className="fixed bottom-6 right-6 z-50 flex items-center 
+               bg-gradient-to-r from-blue-500 to-blue-600 shadow-xl 
+               rounded-full px-4 py-3 cursor-pointer transform transition 
+               hover:scale-105 hover:shadow-2xl
+               w-14 md:w-72"
         >
+          <Send size={20} className="text-white" />
           <input
             type="text"
             placeholder="Ask me anything..."
-            className="flex-1 outline-none bg-transparent text-white placeholder-white cursor-pointer text-base"
+            className="hidden md:flex flex-1 outline-none bg-transparent text-white placeholder-white ml-3 text-base"
             readOnly
           />
-          <Send size={20} className="text-white ml-3" />
         </div>
       )}
 
