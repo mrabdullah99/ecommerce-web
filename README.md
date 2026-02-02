@@ -149,4 +149,3 @@ Special thanks to all the tools and libraries that made development easier, incl
 ## Contact
 
 For any questions or feedback about this project, you can open an issue on this repository or reach out via the repository’s discussion section.
-
